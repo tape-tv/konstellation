@@ -12,6 +12,7 @@ module Yacs
     if yaml_path(path).exist?
       config = YAML.load(yaml_path(path).open('r:utf-8'))
     else
+      puts "Could not find config file at #{path}, loading defaults"
       config = defaults.call
     end
 
