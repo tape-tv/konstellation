@@ -44,12 +44,23 @@ describe Yacs do
         expect(subject.load(path)[:foo]).to eq('bar')
       end
 
-      it 'does not use the passed in defaults' do
-        expect(subject.load(path) do
-          { 'foo' => 'baz' }
-        end[:foo]).to eq('bar')
+      context 'defaults' do
+        it 'merges passed in defaults in development environment' do
+          allow(subject).to receive(:development?) { true }
+
+          expect(subject.load(path) do
+            { foo: 'baz' }
+          end[:foo]).to eq('baz')
+        end
+
+        it 'does not use the passed in defaults otherwise' do
+          expect(subject.load(path) do
+            { foo: 'baz' }
+          end[:foo]).to eq('bar')
+        end
       end
     end
+
 
     context 'when the passed-in file path is missing' do
       it 'uses the default' do
