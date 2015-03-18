@@ -16,8 +16,8 @@ module Yacs
     config = {}
 
     if yaml_path(path).exist?
-      config.merge!(YAML.load(yaml_path(path).open('r:utf-8')))
       config.merge!(defaults.call) if defaults && development?
+      config.merge!(YAML.load(yaml_path(path).open('r:utf-8')))
     else
       puts "Could not find config file at #{path}, loading defaults"
       config.merge!(defaults.call) if defaults

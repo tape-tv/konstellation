@@ -45,18 +45,24 @@ describe Yacs do
       end
 
       context 'defaults' do
-        it 'merges passed in defaults in development environment' do
+        it 'merges defaults with values from file in development environment' do
           allow(subject).to receive(:development?) { true }
 
-          expect(subject.load(path) do
-            { foo: 'baz' }
-          end[:foo]).to eq('baz')
+          config = subject.load(path) do
+            { foo: 'baz', qux: 'quux' }
+          end
+
+          expect(config[:foo]).to eq('bar')
+          expect(config[:qux]).to eq('quux')
         end
 
-        it 'does not use the passed in defaults otherwise' do
-          expect(subject.load(path) do
-            { foo: 'baz' }
-          end[:foo]).to eq('bar')
+        it 'does not use the defaults in other environments' do
+          config = subject.load(path) do
+            { foo: 'baz', qux: 'quux' }
+          end
+
+          expect(config[:foo]).to eq('bar')
+          expect(config[:qux]).to eq(nil)
         end
       end
     end
