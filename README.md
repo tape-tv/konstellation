@@ -4,6 +4,7 @@ A simple YAML config file loader.
 
 [![Build](https://travis-ci.org/tape-tv/schrank.svg?branch=master)](https://travis-ci.org/tape-tv/schrank)
 [![Docs](https://inch-ci.org/github/tape-tv/schrank.svg?branch=master)](https://inch-ci.org/github/tape-tv/schrank)
+[![Gem](https://badge.fury.io/rb/schrank.svg)](https://rubygems.org/gems/schrank)
 
 ## Usage
 
