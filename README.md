@@ -2,6 +2,8 @@
 
 A simple YAML config file loader.
 
+[![Build Status](https://travis-ci.org/tape-tv/schrank.svg?branch=master)](https://travis-ci.org/tape-tv/schrank)
+
 ## Usage
 
 ```ruby
