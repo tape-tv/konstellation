@@ -11,13 +11,7 @@ A simple YAML config file loader.
 require 'schrank'
 ```
 
-Simply load a config.
-
-```ruby
-config = Schrank.load(Rails.root.join('config/production.yml'))
-```
-
-Provide defaults, which will only be used when the YAML file does not exist.
+Load your config, providing defaults.
 
 ```ruby
 config = Schrank.load(Rails.root.join('config/production.yml')) do
@@ -27,3 +21,17 @@ config = Schrank.load(Rails.root.join('config/production.yml')) do
   }
 end
 ```
+
+See [the docs](http://www.rubydoc.info/github/tape-tv/schrank/master) for more details.
+
+## License
+
+MIT.
+
+## Contribution
+
+Contributions welcome! Create a pull request and we'll get back to you as soon as
+possible. Open an issue to discuss anything big.
+
+This project has a code of conduct, found in the root of this repo. Please read it
+before contributing.
