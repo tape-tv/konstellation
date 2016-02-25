@@ -1,5 +1,5 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'yacs'
+require 'schrank'
 
 Dir[File.expand_path('../support/*.rb', __FILE__)].sort.each do |file_path|
   require file_path

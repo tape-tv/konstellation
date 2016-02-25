@@ -1,15 +1,21 @@
-# yacs - Yet Another (Simple) Config System
+# Schrank
 
 ## Usage
 
 ```ruby
-require 'yacs'
+require 'schrank'
+```
 
-# Simply load a config
-config = Yacs.load(File.join(Rails.root, 'config', 'config.yml'))
+Simply load a config.
 
-# Specify defaults when file does not exist
-config = Yacs.load(File.join(Rails.root, 'config', 'storage.yml')) {
+```ruby
+config = Schrank.load(File.join(Rails.root, 'config', 'config.yml'))
+```
+
+Specify defaults when file does not exist.
+
+```ruby
+config = Schrank.load(File.join(Rails.root, 'config', 'storage.yml')) {
   {
     provider: 's3',
     prefix: 'folder/'

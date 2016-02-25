@@ -1,9 +1,9 @@
-require 'yacs/version'
+require 'schrank/version'
 
 require 'yaml'
 require 'active_support/core_ext/hash/indifferent_access'
 
-module Yacs
+module Schrank
   def self.yaml_path(path)
     Pathname.new(path)
   end

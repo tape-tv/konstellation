@@ -1,3 +1,3 @@
-module Yacs
+module Schrank
   VERSION = '1.2.0'
 end

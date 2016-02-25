@@ -2,7 +2,7 @@ require 'tmpdir'
 
 shared_context :uses_tmp_dir do
   around do |example|
-    Dir.mktmpdir('yacs-rspec-') do |dir|
+    Dir.mktmpdir('schrank-rspec-') do |dir|
       @tmp_dir = dir
       example.run
     end

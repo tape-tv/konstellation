@@ -1,13 +1,14 @@
-# coding: utf-8
+#coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'yacs/version'
+
+require 'schrank/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'yacs'
-  spec.version       = Yacs::VERSION
-  spec.authors       = ['Christof Dorner']
-  spec.email         = ['dorner@tape.tv']
+  spec.name          = 'schrank'
+  spec.version       = Schrank::VERSION
+  spec.authors       = ['Christof Dorner', 'Joe Corcoran']
+  spec.email         = ['dorner@tape.tv', 'corcoran@tape.tv']
   spec.summary       = 'Simply load YAML configuration files'
 
   spec.files         = `git ls-files -z`.split("\x0")

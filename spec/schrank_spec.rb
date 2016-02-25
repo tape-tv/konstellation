@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Yacs do
-  subject { Yacs }
+describe Schrank do
+  subject { Schrank }
 
   describe '.yaml_path' do
     let(:path) { '/tmp/config.yml' }
