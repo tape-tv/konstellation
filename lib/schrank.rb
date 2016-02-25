@@ -2,6 +2,7 @@ require 'schrank/version'
 require 'yaml'
 require 'active_support/core_ext/hash/indifferent_access'
 
+# Namespace module.
 module Schrank
   # Attempts to load YAML file. Falls back on defaults
   # hash when file is not found.
