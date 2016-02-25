@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'schrank'
   spec.version       = Schrank::VERSION
   spec.authors       = ['Christof Dorner', 'Joe Corcoran']
-  spec.email         = ['dorner@tape.tv', 'corcoran@tape.tv']
+  spec.email         = ['opensource@tape.tv']
   spec.summary       = 'Simply load YAML configuration files'
 
   spec.files         = `git ls-files -z`.split("\x0")
