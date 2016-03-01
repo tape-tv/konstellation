@@ -1,4 +1,4 @@
-# Schrank
+# ​![ ](http://i.imgur.com/KjZOepH.png) Schrank
 
 A simple YAML config file loader.
 
